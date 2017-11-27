@@ -34,9 +34,11 @@ public class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
+        System.out.println(627 / 10);
+        System.out.println(627 % 10);
         ListNode.print(solution.addTwoNumbers(
                 ListNode.createTestData("[2,4,3]"),
-                ListNode.createTestData("[5,6,4]")
+                ListNode.createTestData("[8,4,4]")
         ));
     }
 }

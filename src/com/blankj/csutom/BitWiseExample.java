@@ -1,5 +1,14 @@
 package com.blankj.csutom;
 
+//https://www.mkyong.com/java/java-convert-ip-address-to-decimal-number/
+//https://www.mkyong.com/java/java-and-0xff-example/?utm_source=mkyong&utm_medium=author&utm_campaign=related-post&utm_content=0
+
+//http://blog.csdn.net/tinna_zhang/article/details/44414747
+//0xFF (十进制1)
+//二进制码:00000000 00000000 00000000 11111111
+//由于0xff最低的8位是1,因此number中低8位中的&之后,如果原来是1,结果还是1,原来是0,结果位还
+//是0.高于8位的,0xff都是0,所以无论是0还是1,结果都是0.
+
 public class BitWiseExample {
 
     public static void main(String[] args) {
