@@ -11,7 +11,7 @@ public class CircleNode {
         //如果无环，则fast先走到终点
         //当链表长度为奇数时，fast->Next为空
         //当链表长度为偶数时，fast为空
-        
+
         while (fast != null && fast.next != null) {
             fast = fast.next.next;
             slow = slow.next;
