@@ -13,6 +13,7 @@ public class Permutation {
     private static String[] permutation(String orginal){
         ArrayList list = new ArrayList();
         if(orginal.length() == 1){
+            System.out.println(orginal);
             return new String[]{orginal};
         } else{
             for (int i = 0; i < orginal.length(); i++) {
