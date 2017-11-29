@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class Permutation {
 
     public static void main(String[] args) {
-        System.out.println(permutation("abcd").length);
+//        System.out.println(permutation("abcd").length);
         System.out.println(Arrays.toString(permutation("abcd")));
     }
 
@@ -23,6 +23,7 @@ public class Permutation {
                 //递归 permutation(leftS) 从2位慢慢加起来的
                 for (String element : permutation(leftS)) {
                     result = resultA + element;
+                    System.out.println(result);
                     list.add(result);
                 }
             }
