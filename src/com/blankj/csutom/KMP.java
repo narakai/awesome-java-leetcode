@@ -1,5 +1,7 @@
 package com.blankj.csutom;
 
+import java.util.Arrays;
+
 public class KMP {
 //    http://blog.csdn.net/v_july_v/article/details/7041827
 //    http://blog.csdn.net/christ1750/article/details/51259425
@@ -13,6 +15,7 @@ public class KMP {
 //    失配时，模式串向右移动的位数为：失配字符所在位置 - 失配字符对应的next 值
 
     public static int[] kmpnext(String dest) {
+//        String a = "baba";  [0,0,1,2]
         int[] next = new int[dest.length()];
         next[0] = 0;
         for (int i = 1, j = 0; i < dest.length(); i++) {
@@ -43,15 +46,12 @@ public class KMP {
     }
 
     public static void main(String[] args) {
-        String a = "baba";
-        String b = "ssdfgasdbababa";
+        String a = "abcabe";
+        String b = "abcabcabea";
         int[] next = kmpnext(a);
         int res = kmp(b, a, next);
-        
-        System.out.println(res);
-        for (int i = 0; i < next.length; i++) {
-            System.out.println(next[i]);
-        }
-        System.out.println(next.length);
+
+        System.out.println("index is: " + res);
+        System.out.println(Arrays.toString(next));
     }
 }
