@@ -21,6 +21,7 @@ public class KMP {
         for (int i = 1, j = 0; i < dest.length(); i++) {
             while (j > 0 && dest.charAt(j) != dest.charAt(i)) {
                 j = next[j - 1];
+                System.out.println("j1= " + j + " i1= " + i);
             }
             if (dest.charAt(i) == dest.charAt(j)) {
                 j++;
@@ -34,6 +35,7 @@ public class KMP {
         for (int i = 0, j = 0; i < str.length(); i++) {
             while (j > 0 && str.charAt(i) != dest.charAt(j)) {
                 j = next[j - 1];
+                System.out.println("j= " + j + " i= " + i);
             }
             if (str.charAt(i) == dest.charAt(j)) {
                 j++;
@@ -46,7 +48,8 @@ public class KMP {
     }
 
     public static void main(String[] args) {
-        String a = "abcabe";
+        //next 数组确实是只要将各个最大前缀后缀的公共元素的长度值右移一位，且把初值赋为-1 即可
+        String a = "abcabcaaf";
         String b = "abcabcabea";
         int[] next = kmpnext(a);
         int res = kmp(b, a, next);
