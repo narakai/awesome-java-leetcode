@@ -13,7 +13,7 @@ import java.util.List;
  * </pre>
  */
 public class Solution {
-//    private static String[] map = new String[]{"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+//    private staticProxy String[] map = new String[]{"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
 //
 //    public List<String> letterCombinations(String digits) {
 //        if (digits.length() == 0) return Collections.emptyList();
