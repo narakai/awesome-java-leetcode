@@ -37,6 +37,7 @@ public class Fibonacci {
      * @author bing
      */
 
+//    https://blog.csdn.net/flyfish1986/article/details/48014523
 
     // 关联矩阵
     private static final BigInteger[][] UNIT = {{BigInteger.valueOf(1), BigInteger.valueOf(1)}, {BigInteger.valueOf(1), BigInteger.valueOf(0)}};
@@ -49,6 +50,7 @@ public class Fibonacci {
      * @param n
      * @return
      */
+//    问题转换为二阶矩阵的n次幂
     public static BigInteger[][] fib3(int n) {
         if (n == 0) {
             return ZERO;
@@ -56,12 +58,16 @@ public class Fibonacci {
         if (n == 1) {
             return UNIT;
         }
-        // n是奇数
+        // n是偶数
+        //以计算A6为例
+        //将6转化成二进制110 为A的4次方 和 A的2次方
         if ((n & 1) == 0) {
             BigInteger[][] matrix = fib3(n >> 1);
             return matrixMultiply(matrix, matrix);
         }
-        // n是偶数
+        // n是奇数
+        //10进制7 = 二进制 111
+//        例如A7=A4次方∗A2次方∗A
         BigInteger[][] matrix = fib3((n - 1) >> 1);
         return matrixMultiply(matrixMultiply(matrix, matrix), UNIT);
     }
