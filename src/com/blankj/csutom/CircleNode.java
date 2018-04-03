@@ -1,6 +1,7 @@
 package com.blankj.csutom;
 
-import com.blankj.structure.ListNode;
+
+import com.blankj.csutom.structure.ListNode;
 
 public class CircleNode {
 
