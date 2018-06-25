@@ -19,9 +19,9 @@ public class DListNode {
         DListNode curr = null;
         while (head != null) {
             curr = head;
-            head = curr.next;
-            curr.next = curr.prev;
-            curr.prev = head;
+            head = head.next;
+            head.next = head.prev;
+            head.prev = curr;
         }
         return curr;
     }
