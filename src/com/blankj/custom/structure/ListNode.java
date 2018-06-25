@@ -18,9 +18,8 @@ public class ListNode {
     public ListNode reverseList(ListNode head) {
         ListNode curr = null;
         while (head != null) { //如果当前节点不为空
-            ListNode tmp = head.next; //tmp赋值为head后面的节点
             curr = head; //prev后移一位
-            head = tmp; //head后移一位
+            head = head.next; //head后移一位
             head.next = curr; //head指向head后面那个
         }
         return curr;
