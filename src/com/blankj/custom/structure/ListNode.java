@@ -14,16 +14,17 @@ public class ListNode {
     }
 
     //单向链表, 从前往后反转各个结点的指针域的指向
-    //非递归实现很简单，只需要遍历一遍链表，在遍历过程中，把遍历的节点一次插入到头部
+    //非递归实现很简单，只需要遍历一遍链表，在遍历过程中，把遍历的节点依次插入到头部
     public ListNode reverseList(ListNode head) {
-        ListNode prev = null;
+        ListNode curr = null;
         while (head != null) { //如果当前节点不为空
-            ListNode tmp = head.next; //tmp赋值为head后面的节点
-            head.next = prev; //head指向head后面那个
-            prev = head; //prev后移一位
-            head = tmp; //head后移一位
+            curr = head; //prev后移一位
+            head = head.next;
+            head.next = curr; //head指向head后面那个
+//            ListNode tmp = head.next; //tmp赋值为head后面的节点
+//            head = tmp; //head后移一位
         }
-        return prev;
+        return curr;
     }
 
 }
