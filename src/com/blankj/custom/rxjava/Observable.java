@@ -4,7 +4,8 @@ public class Observable<T> {
     //接口，每个Observable里面有一个OnSubscribe对象，只有一个方法（void call(Subscriber<? super T> subscriber);），
     // 用来产生数据流，这是典型的命令模式。
     public interface OnSubscribe<T> {
-        void call(Subscriber<? super T> subscriber);
+//        void call(Subscriber<? super T> subscriber);
+        void call(Subscriber<T> subscriber);
     }
 
     //接口实现类
@@ -20,9 +21,9 @@ public class Observable<T> {
         return new Observable<T>(onSubscribe);
     }
 
-    public void subscribe(Subscriber<? super T> subscriber) {
+    public void subscribe(Subscriber<T> subscriber) {
         System.out.println("will call subscriber");
-        subscriber.onStart();
+//        subscriber.onStart();
         //onSubscribe来call这个subscriber
         onSubscribe.call(subscriber);
     }

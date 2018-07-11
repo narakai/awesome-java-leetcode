@@ -5,7 +5,7 @@ public class Test {
         Observable.create(new Observable.OnSubscribe<Integer>() {
             //实例化接口实现类，需要override
             @Override
-            public void call(Subscriber<? super Integer> subscriber) {
+            public void call(Subscriber<Integer> subscriber) {
                 System.out.println("call method execute");
                 for (int i = 0; i < 10; i++) {
                     System.out.println("Prepare data " + i);
