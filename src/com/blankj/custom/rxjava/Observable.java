@@ -22,7 +22,7 @@ public class Observable<T> {
     }
 
     public void subscribe(Subscriber<T> subscriber) {
-        System.out.println("will call subscriber");
+        System.out.println("will call subscriber\n");
 //        subscriber.onStart();
         //onSubscribe来call这个subscriber
         onSubscribe.call(subscriber);

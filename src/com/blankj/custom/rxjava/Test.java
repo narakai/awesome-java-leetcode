@@ -6,7 +6,7 @@ public class Test {
             //实例化接口实现类，需要override
             @Override
             public void call(Subscriber<Integer> subscriber) {
-                System.out.println("call method execute");
+                System.out.println("call method execute\n");
                 for (int i = 0; i < 10; i++) {
                     System.out.println("Prepare data " + i);
                     subscriber.onNext(i);
@@ -27,7 +27,7 @@ public class Test {
 
             @Override
             public void onNext(Integer var1) {
-                System.out.println(var1);
+                System.out.println("Received data " + var1);
             }
         });
     }
