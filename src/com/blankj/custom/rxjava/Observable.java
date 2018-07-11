@@ -10,6 +10,8 @@ public class Observable<T> {
 
 // 每个Observable里面有一个OnSubscribe对象，只有一个方法（void call(Subscriber<? super T> subscriber);），
 // 用来产生数据流，这是典型的命令模式。
+
+//  <T>  告诉编译器我这个地方有个类型
     public static <T> Observable<T> create(OnSubscribe<T> onSubscribe) {
         return new Observable<T>(onSubscribe);
     }
