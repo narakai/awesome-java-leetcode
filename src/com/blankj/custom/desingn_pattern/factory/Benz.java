@@ -1,4 +1,4 @@
-package com.blankj.custom.factory;
+package com.blankj.custom.desingn_pattern.factory;
 
 public class Benz implements Car {
 

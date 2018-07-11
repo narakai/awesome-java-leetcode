@@ -1,4 +1,4 @@
-package com.blankj.custom.single;
+package com.blankj.custom.desingn_pattern.single;
 
 /**
  * 码家学院

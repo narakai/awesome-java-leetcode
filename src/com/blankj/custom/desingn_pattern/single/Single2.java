@@ -1,4 +1,4 @@
-package com.blankj.custom.single;
+package com.blankj.custom.desingn_pattern.single;
 
 // 懒汉式（）
 public class Single2 {
