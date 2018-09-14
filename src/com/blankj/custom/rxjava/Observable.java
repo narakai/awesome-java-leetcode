@@ -16,7 +16,7 @@ public class Observable<T> {
         this.onSubscribe = onSubscribe;
     }
 
-    //  <T>  告诉编译器我这个地方有个类型
+    //  <T>  告诉编译器我这个地方有个类型 静态方法必须加
     public static <T> Observable<T> create(OnSubscribe<T> onSubscribe) {
         return new Observable<T>(onSubscribe);
     }
